@@ -1,0 +1,14 @@
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\bin\Debug\netstandard2.0\Todo.Infrastructure.deps.json
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\bin\Debug\netstandard2.0\Todo.Infrastructure.dll
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\bin\Debug\netstandard2.0\Todo.Infrastructure.pdb
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\bin\Debug\netstandard2.0\TodoList.Application.dll
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\bin\Debug\netstandard2.0\TodoList.Domain.dll
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\bin\Debug\netstandard2.0\TodoList.Application.pdb
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\bin\Debug\netstandard2.0\TodoList.Domain.pdb
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\obj\Debug\netstandard2.0\Todo.Infrastructure.csprojAssemblyReference.cache
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\obj\Debug\netstandard2.0\Todo.Infrastructure.AssemblyInfoInputs.cache
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\obj\Debug\netstandard2.0\Todo.Infrastructure.AssemblyInfo.cs
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\obj\Debug\netstandard2.0\Todo.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\obj\Debug\netstandard2.0\Todo.Infrastructure.csproj.CopyComplete
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\obj\Debug\netstandard2.0\Todo.Infrastructure.dll
+D:\Code\TodoList\TodoList\TodoList\Todo.Infrastructure\obj\Debug\netstandard2.0\Todo.Infrastructure.pdb

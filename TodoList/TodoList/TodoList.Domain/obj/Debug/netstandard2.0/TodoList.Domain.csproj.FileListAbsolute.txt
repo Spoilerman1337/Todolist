@@ -1,0 +1,9 @@
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\bin\Debug\netstandard2.0\TodoList.Domain.deps.json
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\bin\Debug\netstandard2.0\TodoList.Domain.dll
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\bin\Debug\netstandard2.0\TodoList.Domain.pdb
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\obj\Debug\netstandard2.0\TodoList.Domain.csprojAssemblyReference.cache
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\obj\Debug\netstandard2.0\TodoList.Domain.AssemblyInfoInputs.cache
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\obj\Debug\netstandard2.0\TodoList.Domain.AssemblyInfo.cs
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\obj\Debug\netstandard2.0\TodoList.Domain.csproj.CoreCompileInputs.cache
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\obj\Debug\netstandard2.0\TodoList.Domain.dll
+D:\Code\TodoList\TodoList\TodoList\TodoList.Domain\obj\Debug\netstandard2.0\TodoList.Domain.pdb
