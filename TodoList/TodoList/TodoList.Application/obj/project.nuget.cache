@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "h1dJg7ra/LW2vSMR9+hHSYclh3w749sXfZBjcWmDhCkHFtJYbmP0QCCeRm0BT/nGgLvOoRmgVel7FHUQSMnWZQ==",
+  "success": true,
+  "projectFilePath": "D:\\Code\\TodoList\\TodoList\\TodoList\\TodoList.Application\\TodoList.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mrcat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\mrcat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
