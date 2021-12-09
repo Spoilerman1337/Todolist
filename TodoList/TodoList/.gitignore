@@ -1,0 +1,5 @@
+# Ignore user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
