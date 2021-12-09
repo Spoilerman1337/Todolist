@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "auDhzw/iCd07Z8QxsvLA7xH1oO1URYHB8dImD82P6Un4V7wsJIqEaCxoaPlUwBRuL6V6N7I47ftUt8BHxSOKgA==",
+  "dgSpecHash": "i7ukCZYsQj/t+R8pg7h3eqwRwMHrFdIsHwUWtreGCNAt4p/lcTwDtgDjt7wFHFPEbCy0Rn9cP9i7i3sSj0u+Rg==",
   "success": true,
   "projectFilePath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\Todo.Infrastructure.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\mrcat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\mrcat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
