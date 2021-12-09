@@ -17,3 +17,9 @@ bin/
 Bin/
 obj/
 Obj/
+
+# Visual Studio cache/options directory
+.vs/
+
+#Other
+/node_modules
