@@ -10,6 +10,6 @@ namespace TodoList.Domain.Entities
         public string Title { get; set; }
         public bool IsDone { get; set; }
         public Priority PriorityLevel { get; set; }
-        public TodoList List { get; set; }
+        public TodoItemsList List { get; set; }
     }
 }
