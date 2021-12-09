@@ -4,7 +4,7 @@
     "net6.0": {
       "Todo.Infrastructure/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "TodoList.Application": "1.0.0"
         },
@@ -17,7 +17,7 @@
       },
       "TodoList.Application/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "TodoList.Domain": "1.0.0"
         },
@@ -30,7 +30,7 @@
       },
       "TodoList.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
           "bin/placeholder/TodoList.Domain.dll": {}
         },
