@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ysGrgP4Zno16o5p9yua599e4cmGGL2FmHtTAbiysXjXt05J/aknrv2v5OH/cHlsPN1ZLwonpOIl5TU2l/SugAQ==",
+  "dgSpecHash": "K12XtIGVXWuL405Fmp282fJ3ODN9/AY4uq4QXB6UrUCuEtJqAM7c7TJulAA+tz31Jx80zDgB9klwWgfnbID9fw==",
   "success": true,
-  "projectFilePath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\Todo.Infrastructure.csproj",
+  "projectFilePath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\TodoList.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrcat\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\mrcat\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
