@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Todo.Infrastructure.Persistence.Configuration;
+using TodoList.Infrastructure.Persistence.Configuration;
 using TodoList.Application.Common.Interfaces;
 using TodoList.Domain.Entities;
 
-namespace Todo.Infrastructure.Persistence;
+namespace TodoList.Infrastructure.Persistence;
 
     public class TodoListDbContext : DbContext, ITodoListDbContext
 {
