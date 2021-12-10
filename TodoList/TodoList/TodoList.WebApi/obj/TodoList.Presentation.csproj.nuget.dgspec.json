@@ -4,22 +4,24 @@
     "D:\\Code\\TodoList\\TodoList\\TodoList\\TodoList.WebApi\\TodoList.Presentation.csproj": {}
   },
   "projects": {
-    "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\TodoList.Infrastructure.csproj": {
+    "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\Todo.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\TodoList.Infrastructure.csproj",
-        "projectName": "TodoList.Infrastructure",
-        "projectPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\TodoList.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\Todo.Infrastructure.csproj",
+        "projectName": "Todo.Infrastructure",
+        "projectPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\Todo.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\mrcat\\.nuget\\packages\\",
         "outputPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\mrcat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -47,6 +49,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -76,12 +84,14 @@
         "outputPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\TodoList.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\mrcat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -110,15 +120,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[10.1.1, )"
-            },
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0, )"
             }
@@ -152,12 +154,14 @@
         "outputPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\TodoList.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\mrcat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -210,12 +214,14 @@
         "outputPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\TodoList.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\mrcat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -228,8 +234,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\TodoList.Infrastructure.csproj": {
-                "projectPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\TodoList.Infrastructure.csproj"
+              "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\Todo.Infrastructure.csproj": {
+                "projectPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\Todo.Infrastructure\\Todo.Infrastructure.csproj"
               },
               "D:\\Code\\TodoList\\TodoList\\TodoList\\TodoList.Application\\TodoList.Application.csproj": {
                 "projectPath": "D:\\Code\\TodoList\\TodoList\\TodoList\\TodoList.Application\\TodoList.Application.csproj"
