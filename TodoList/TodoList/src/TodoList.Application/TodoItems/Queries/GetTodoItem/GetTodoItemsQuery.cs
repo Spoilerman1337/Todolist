@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace TodoList.Application.TodoItems.Queries
+namespace TodoList.Application.TodoItems.Queries.GetTodoItem
 {
     public class GetTodoItemsQuery : IRequest<List<TodoItemDto>>
     {

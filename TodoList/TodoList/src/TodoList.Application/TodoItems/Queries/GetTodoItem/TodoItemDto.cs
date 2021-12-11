@@ -2,7 +2,7 @@
 using TodoList.Application.Common.Mappings;
 using TodoList.Domain.Entities;
 
-namespace TodoList.Application.TodoItems.Queries
+namespace TodoList.Application.TodoItems.Queries.GetTodoItem
 {
     public class TodoItemDto : IMapFrom<TodoItem>
     {

@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TodoList.Application.Common.Interfaces;
 
-namespace TodoList.Application.TodoItems.Queries
+namespace TodoList.Application.TodoItems.Queries.GetTodoItem
 {
     public class GetTodoItemsQueryHandler : IRequestHandler<GetTodoItemsQuery, List<TodoItemDto>>
     {
