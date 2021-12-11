@@ -6,7 +6,7 @@ using TodoList.Application.Common.Exceptions;
 using TodoList.Application.Common.Interfaces;
 using TodoList.Domain.Entities;
 
-namespace TodoList.Application.TodoItems.Commands.DeleteTodoItem
+namespace TodoList.Application.TodoItems.Commands.UpdateTodoItem
 {
     public class UpdateTodoItemCommandHandler : IRequestHandler<UpdateTodoItemCommand>
     {
