@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
 using TodoList.Application.Common.Exceptions;
@@ -16,9 +15,9 @@ namespace TodoList.Application.TodoItems.Commands.UpdateTodoItem
 
         public async Task<Unit> Handle(UpdateTodoItemCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.TodoItems.FindAsync(new object[] {request.Id}, cancellationToken);
+            var entity = await _context.TodoItems.FindAsync(new object[] { request.Id }, cancellationToken);
 
-            if(entity == null)
+            if (entity == null)
             {
                 throw new NotFoundException(nameof(TodoItem), request.Id);
             }

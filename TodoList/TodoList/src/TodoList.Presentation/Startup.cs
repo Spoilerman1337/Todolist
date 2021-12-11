@@ -3,10 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
+using TodoList.Application.Common.Interfaces;
+using TodoList.Application.Common.Mappings;
 
 namespace TodoList.Presentation
 {
@@ -14,6 +13,11 @@ namespace TodoList.Presentation
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(config =>
+            {
+                config.AddProfile(new MappingProfile(Assembly.GetExecutingAssembly()));
+                config.AddProfile(new MappingProfile(typeof(ITodoListDbContext).Assembly));
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

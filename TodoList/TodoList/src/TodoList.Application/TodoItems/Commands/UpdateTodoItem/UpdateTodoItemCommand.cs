@@ -3,7 +3,7 @@ using System;
 
 namespace TodoList.Application.TodoItems.Commands.UpdateTodoItem
 {
-    public class UpdateTodoItemsCommand : IRequest<>
+    public class UpdateTodoItemCommand : IRequest
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
