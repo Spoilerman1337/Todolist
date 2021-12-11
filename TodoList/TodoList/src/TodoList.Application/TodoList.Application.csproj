@@ -16,7 +16,6 @@
   <ItemGroup>
     <Folder Include="TodoItemsLists\Commands\" />
     <Folder Include="TodoItemsLists\Queries\" />
-    <Folder Include="TodoItems\Commands\UpdateTodoItem\" />
     <Folder Include="TodoItems\Queries\" />
   </ItemGroup>
 

@@ -16,7 +16,7 @@ namespace TodoList.Application.TodoItems.Commands.UpdateTodoItem
 
         public async Task<Unit> Handle(UpdateTodoItemCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.TodoItems.FirstOrDefaultAsync(item => item.Id == request.Id, cancellationToken);
+            var entity = await _context.TodoItems.FindAsync(new object[] {request.Id}, cancellationToken);
 
             if(entity == null)
             {
