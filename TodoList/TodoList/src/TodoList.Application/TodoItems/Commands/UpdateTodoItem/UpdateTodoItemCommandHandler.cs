@@ -23,11 +23,12 @@ namespace TodoList.Application.TodoItems.Commands.UpdateTodoItem
                 throw new NotFoundException(nameof(TodoItem), request.Id);
             }
 
+            entity.Title = request.Title;
+            entity.IsDone = request.IsDone;
+
             await _context.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;
         }
-
-        
     }
 }
