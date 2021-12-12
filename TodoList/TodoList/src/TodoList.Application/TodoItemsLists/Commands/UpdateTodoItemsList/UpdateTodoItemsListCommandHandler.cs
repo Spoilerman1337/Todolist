@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using TodoList.Application.Common.Exceptions;
@@ -23,6 +24,7 @@ namespace TodoList.Application.TodoItemsLists.Commands.UpdateTodoItemsList
 
             entity.Name = request.Name;
             entity.Description = request.Description;
+            entity.LastEditDate = DateTime.Now;
 
             await _context.SaveChangesAsync(cancellationToken);
 
