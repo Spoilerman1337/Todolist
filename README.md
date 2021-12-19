@@ -1,3 +1,3 @@
-# Todolist
+# TodoList
 
-Todolist desc
+Heavily WIP todolist
