@@ -8,7 +8,6 @@ using TodoList.Application.TodoItemsLists.Queries.GetTodoItemsList;
 
 namespace TodoList.Presentation.Controllers
 {
-    [ApiVersion("1.0")]
     [Produces("application/json")]
     [Route("api/{version:apiVersion}/[controller]")]
     public class TodoItemsListController : ApiControllerBase

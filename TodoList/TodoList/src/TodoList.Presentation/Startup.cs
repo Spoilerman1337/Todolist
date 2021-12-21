@@ -21,6 +21,7 @@ namespace TodoList.Presentation
         {
             services.AddApplication();
             services.AddInfrastructure(Configuration);
+            services.AddControllers();
 
             services.AddCors(options =>
             {
