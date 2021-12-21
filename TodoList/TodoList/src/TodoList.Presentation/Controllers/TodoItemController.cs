@@ -11,7 +11,7 @@ using TodoList.Application.TodoItems.Queries.GetTodoItem;
 namespace TodoList.Presentation.Controllers
 {
     [Produces("application/json")]
-    [Route("api/{version:apiVersion}/[controller]")]
+    [Route("api/[controller]")]
     public class TodoItemController : ApiControllerBase
     {
         [HttpGet]

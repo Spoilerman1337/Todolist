@@ -9,7 +9,7 @@ using TodoList.Application.TodoItemsLists.Queries.GetTodoItemsList;
 namespace TodoList.Presentation.Controllers
 {
     [Produces("application/json")]
-    [Route("api/{version:apiVersion}/[controller]")]
+    [Route("api/[controller]")]
     public class TodoItemsListController : ApiControllerBase
     {
         [HttpGet]
