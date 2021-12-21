@@ -16,9 +16,9 @@ namespace TodoList.Presentation.Controllers
     public class TodoItemController : ApiControllerBase
     {
         [HttpGet]
-        public async Task<List<TodoItemDto>> GetTodoItems([FromQuery] GetTodoItemsQuery query)
+        public async Task<List<TodoItemDto>> GetTodoItems()
         {
-            return await Sender.Send(query);
+            return await Sender.Send(new GetTodoItemsQuery());
         }
 
         [HttpPost]
@@ -27,7 +27,7 @@ namespace TodoList.Presentation.Controllers
             return await Sender.Send(command);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> UpdateTodoItem(Guid id, UpdateTodoItemCommand command)
         {
             if(id != command.Id)
@@ -53,7 +53,7 @@ namespace TodoList.Presentation.Controllers
             return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteTodoItem(Guid id)
         {
             await Sender.Send(new DeleteTodoItemCommand { Id = id });
