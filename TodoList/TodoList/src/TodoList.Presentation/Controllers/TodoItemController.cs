@@ -14,10 +14,16 @@ namespace TodoList.Presentation.Controllers
     [Route("api/[controller]")]
     public class TodoItemController : ApiControllerBase
     {
-        [HttpGet]
-        public async Task<List<TodoItemDto>> GetTodoItems()
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List<TodoItemDto>>> GetTodoItems(Guid id)
         {
-            return await Sender.Send(new GetTodoItemsQuery());
+            var query = new GetTodoItemsQuery
+            {
+                ListId = id
+            };
+
+            var vm = await Sender.Send(query);
+            return Ok(vm);
         }
 
         [HttpPost]

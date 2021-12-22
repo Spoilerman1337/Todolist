@@ -11,6 +11,7 @@ namespace TodoList.Application.TodoItemsLists.Queries.GetTodoItemsList
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime LastEditDate { get; set; }
+
         public void Mapping(Profile profile) => profile.CreateMap<TodoItemsList, TodoItemsListDto>();
     }
 }
