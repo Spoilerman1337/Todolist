@@ -3,9 +3,9 @@ using System;
 
 namespace TodoList.Application.TodoItems.Commands.DeleteTodoItem
 {
-    public class DeleteTodoItemCommandHandlerValidator : AbstractValidator<DeleteTodoItemCommand>
+    public class DeleteTodoItemCommandValidator : AbstractValidator<DeleteTodoItemCommand>
     {
-        public DeleteTodoItemCommandHandlerValidator()
+        public DeleteTodoItemCommandValidator()
         {
             RuleFor(v => v.Id).NotEqual(Guid.Empty);
         }

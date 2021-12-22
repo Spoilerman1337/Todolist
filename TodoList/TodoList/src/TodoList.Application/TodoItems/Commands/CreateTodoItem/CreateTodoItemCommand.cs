@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace TodoList.Application.TodoItems.CreateTodoItem.Commands
+namespace TodoList.Application.TodoItems.Commands.CreateTodoItem
 {
     public class CreateTodoItemCommand : IRequest<Guid>
     {

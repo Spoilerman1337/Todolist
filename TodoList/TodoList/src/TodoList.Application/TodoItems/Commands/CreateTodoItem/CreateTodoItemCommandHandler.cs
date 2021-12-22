@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using TodoList.Application.Common.Interfaces;
 using TodoList.Domain.Entities;
 
-namespace TodoList.Application.TodoItems.CreateTodoItem.Commands
+namespace TodoList.Application.TodoItems.Commands.CreateTodoItem
 {
     public class CreateTodoItemCommandHandler : IRequestHandler<CreateTodoItemCommand, Guid>
     {
