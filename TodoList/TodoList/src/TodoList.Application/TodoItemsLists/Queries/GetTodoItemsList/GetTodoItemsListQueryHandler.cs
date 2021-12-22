@@ -18,7 +18,7 @@ namespace TodoList.Application.TodoItemsLists.Queries.GetTodoItemsList
 
         public async Task<TodoItemsListVm> Handle(GetTodoItemsListQuery request, CancellationToken cancellationToken)
         {
-            var todoItemsListQuery = await _context.TodoItems
+            var todoItemsListQuery = await _context.TodoLists
                 .ProjectTo<TodoItemsListDto>(_mapper.ConfigurationProvider)
                 .OrderBy(x => x.Id)
                 .ToListAsync(cancellationToken);
