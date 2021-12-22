@@ -7,7 +7,7 @@ namespace TodoList.Application.TodoItems.Commands.DeleteTodoItem
     {
         public DeleteTodoItemCommandValidator()
         {
-            RuleFor(v => v.Id).NotEqual(Guid.Empty);
+            RuleFor(v => v.Id).NotEqual(Guid.Empty).WithMessage("ID is required.");
         }
     }
 }

@@ -17,7 +17,7 @@ namespace TodoList.Application.TodoItemsLists.Commands.CreateTodoItemsList
             RuleFor(v => v.Name)
                 .NotEmpty().WithMessage("Title is required.")
                 .MaximumLength(50).WithMessage("Title must not exceed 500 characters.")
-                .MustAsync(IsUniqueTitle).WithMessage("Title name must be unique");
+                .MustAsync(IsUniqueTitle).WithMessage("Title name must be unique.");
         }
 
         private async Task<bool> IsUniqueTitle(string name, CancellationToken cancellationToken)

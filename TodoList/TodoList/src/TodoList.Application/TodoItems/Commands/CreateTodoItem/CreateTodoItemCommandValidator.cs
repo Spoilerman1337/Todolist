@@ -7,8 +7,10 @@ namespace TodoList.Application.TodoItems.Commands.CreateTodoItem
     {
         public CreateTodoItemCommandValidator()
         {
-            RuleFor(v => v.Title).NotEmpty().MaximumLength(50);
-            RuleFor(v => v.ListId).NotEqual(Guid.Empty);
+            RuleFor(v => v.Title)
+                .NotEmpty().WithMessage("Title is required.")
+                .MaximumLength(50).WithMessage("Title must not exceed 50 characters.");
+            RuleFor(v => v.ListId).NotEqual(Guid.Empty).WithMessage("List ID is required.");
         }
     }
 }

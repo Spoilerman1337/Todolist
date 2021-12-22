@@ -11,7 +11,7 @@ namespace TodoList.Application.TodoItems.Queries.GetTodoItem
     {
         public GetTodoItemsQueryValidator()
         {
-            RuleFor(v => v.ListId).NotEmpty().WithMessage("ListId is required.");
+            RuleFor(v => v.ListId).NotEmpty().WithMessage("List ID is required.");
         }
     }
 }
