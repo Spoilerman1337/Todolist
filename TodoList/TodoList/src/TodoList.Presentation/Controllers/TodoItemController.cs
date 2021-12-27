@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using TodoList.Application.TodoItems.Commands.DeleteTodoItem;
 using TodoList.Application.TodoItems.Commands.UpdateTodoItem;
 using TodoList.Application.TodoItems.Commands.UpdateTodoItemDetails;
-using TodoList.Application.TodoItems.CreateTodoItem.Commands;
+using TodoList.Application.TodoItems.Commands.CreateTodoItem;
 using TodoList.Application.TodoItems.Queries.GetTodoItem;
 
 namespace TodoList.Presentation.Controllers
