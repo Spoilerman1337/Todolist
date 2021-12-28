@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using TodoList.Application.TodoItems.Commands.CreateTodoItem;
 using TodoList.Application.TodoItems.Commands.DeleteTodoItem;
 using TodoList.Application.TodoItems.Commands.UpdateTodoItem;
 using TodoList.Application.TodoItems.Commands.UpdateTodoItemDetails;
-using TodoList.Application.TodoItems.Commands.CreateTodoItem;
 using TodoList.Application.TodoItems.Queries.GetTodoItem;
-using Microsoft.AspNetCore.Http;
 
 namespace TodoList.Presentation.Controllers
 {
@@ -85,7 +81,7 @@ namespace TodoList.Presentation.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> UpdateTodoItem(Guid id, UpdateTodoItemCommand command)
         {
-            if(id != command.Id)
+            if (id != command.Id)
             {
                 return BadRequest();
             }
