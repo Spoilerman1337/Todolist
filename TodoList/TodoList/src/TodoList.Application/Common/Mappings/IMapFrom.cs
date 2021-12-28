@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 
-namespace TodoList.Application.Common.Mappings
+namespace TodoList.Application.Common.Mappings;
+
+public interface IMapFrom<T>
 {
-    public interface IMapFrom<T>
-    {
-        void Mapping(Profile profile) => profile.CreateMap(typeof(T), GetType());
-    }
+    void Mapping(Profile profile) => profile.CreateMap(typeof(T), GetType());
 }
+

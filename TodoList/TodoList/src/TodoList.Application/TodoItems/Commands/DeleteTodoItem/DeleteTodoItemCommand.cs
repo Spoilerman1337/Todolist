@@ -1,10 +1,10 @@
 ﻿using MediatR;
 using System;
 
-namespace TodoList.Application.TodoItems.Commands.DeleteTodoItem
+namespace TodoList.Application.TodoItems.Commands.DeleteTodoItem;
+
+public class DeleteTodoItemCommand : IRequest
 {
-    public class DeleteTodoItemCommand : IRequest
-    {
-        public Guid Id { get; set; }
-    }
+    public Guid Id { get; set; }
 }
+

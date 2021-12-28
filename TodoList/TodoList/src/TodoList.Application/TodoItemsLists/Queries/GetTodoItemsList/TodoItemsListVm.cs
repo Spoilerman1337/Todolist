@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace TodoList.Application.TodoItemsLists.Queries.GetTodoItemsList
+namespace TodoList.Application.TodoItemsLists.Queries.GetTodoItemsList;
+
+public class TodoItemsListVm
 {
-    public class TodoItemsListVm
-    {
-        public IList<TodoItemsListDto> Lists { get; set; }
-    }
+    public IList<TodoItemsListDto> Lists { get; set; }
 }
+

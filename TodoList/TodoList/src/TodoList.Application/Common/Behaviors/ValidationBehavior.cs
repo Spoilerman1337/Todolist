@@ -5,31 +5,31 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TodoList.Application.Common.Behaviors
+namespace TodoList.Application.Common.Behaviors;
+
+public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
+    private readonly IEnumerable<IValidator<TRequest>> _validators;
+
+    public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators)
     {
-        private readonly IEnumerable<IValidator<TRequest>> _validators;
+        _validators = validators;
+    }
 
-        public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators)
+    public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+    {
+        var context = new ValidationContext<TRequest>(request);
+        var failures = _validators
+            .Select(v => v.Validate(context))
+            .SelectMany(result => result.Errors)
+            .Where(failure => failure != null)
+            .ToList();
+
+        if (failures.Count != 0)
         {
-            _validators = validators;
+            throw new ValidationException(failures);
         }
-
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
-        {
-            var context = new ValidationContext<TRequest>(request);
-            var failures = _validators
-                .Select(v => v.Validate(context))
-                .SelectMany(result => result.Errors)
-                .Where(failure => failure != null)
-                .ToList();
-
-            if(failures.Count != 0)
-            {
-                throw new ValidationException(failures);
-            }
-            return await next();
-        }
+        return await next();
     }
 }
+

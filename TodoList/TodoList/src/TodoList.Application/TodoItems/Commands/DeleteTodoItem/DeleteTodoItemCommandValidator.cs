@@ -1,13 +1,13 @@
 ﻿using FluentValidation;
 using System;
 
-namespace TodoList.Application.TodoItems.Commands.DeleteTodoItem
+namespace TodoList.Application.TodoItems.Commands.DeleteTodoItem;
+
+public class DeleteTodoItemCommandValidator : AbstractValidator<DeleteTodoItemCommand>
 {
-    public class DeleteTodoItemCommandValidator : AbstractValidator<DeleteTodoItemCommand>
+    public DeleteTodoItemCommandValidator()
     {
-        public DeleteTodoItemCommandValidator()
-        {
-            RuleFor(v => v.Id).NotEqual(Guid.Empty).WithMessage("ID is required.");
-        }
+        RuleFor(v => v.Id).NotEqual(Guid.Empty).WithMessage("ID is required.");
     }
 }
+
