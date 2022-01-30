@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Reflection;
 using TodoList.Application;
 using TodoList.Infrastructure;
@@ -20,6 +21,18 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin();
     });
 });
+
+builder.Services.AddAuthentication(config =>
+{
+    config.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.Authority = "https://localhost:7006";
+        options.Audience = "TodoListWebAPI";
+        options.RequireHttpsMetadata = false;
+    });
 
 builder.Services.AddSwaggerGen(config =>
 {
@@ -45,6 +58,7 @@ app.UseSwaggerUI(config =>
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>

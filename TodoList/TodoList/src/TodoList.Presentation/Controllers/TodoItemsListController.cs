@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TodoList.Application.TodoItemsLists.Commands.CreateTodoItemsList;
 using TodoList.Application.TodoItemsLists.Commands.DeleteTodoItemsList;
 using TodoList.Application.TodoItemsLists.Commands.UpdateTodoItemsList;
@@ -21,6 +22,7 @@ public class TodoItemsListController : ApiControllerBase
     /// <response code="200">Success</response>
     /// <response code="401">Unauthorized</response>
     [HttpGet]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<TodoItemsListVm>> GetTodoList()
@@ -40,6 +42,7 @@ public class TodoItemsListController : ApiControllerBase
     /// <response code="200">Success</response>
     /// <response code="401">Unauthorized</response>
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<Guid>> CreateTodoList(CreateTodoItemsListCommand command)
@@ -60,6 +63,7 @@ public class TodoItemsListController : ApiControllerBase
     /// <response code="401">Unauthorized</response>
     /// <response code="400">Bad Request</response>
     [HttpPut("{id}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -86,6 +90,7 @@ public class TodoItemsListController : ApiControllerBase
     /// <response code="204">Success</response>
     /// <response code="401">Unauthorized</response>
     [HttpDelete("{id}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult> DeleteTodoList(Guid id)
