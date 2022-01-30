@@ -75,6 +75,7 @@ namespace TodoList.IdentityServer.Controllers
             var user = new AppUser
             {
                 UserName = viewModel.Username,
+                Email = viewModel.Email,
             };
 
             var result = await _userManager.CreateAsync(user, viewModel.Password);
