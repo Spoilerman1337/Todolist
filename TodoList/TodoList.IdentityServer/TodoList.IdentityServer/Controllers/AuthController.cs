@@ -29,12 +29,12 @@ namespace TodoList.IdentityServer.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel viewModel)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(viewModel);
             }
-            
-            var user = await _userManager.FindByNameAsync(viewModel.Username);
+
+            var user = await _userManager.FindByEmailAsync(viewModel.Email);
 
             if (user == null)
             {
@@ -44,12 +44,48 @@ namespace TodoList.IdentityServer.Controllers
 
             var result = await _signInManager.PasswordSignInAsync(viewModel.Username, viewModel.Password, true, true);
 
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
                 return Redirect(viewModel.ReturnUrl);
             }
 
             ModelState.AddModelError(string.Empty, "Login error");
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Register(string returnUrl)
+        {
+            var viewModel = new RegisterViewModel
+            {
+                ReturnUrl = returnUrl,
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(viewModel);
+            }
+
+            var user = new AppUser
+            {
+                UserName = viewModel.Username,
+            };
+
+            var result = await _userManager.CreateAsync(user, viewModel.Password);
+
+            if (result.Succeeded)
+            {
+                await _signInManager.SignInAsync(user, false);
+                return Redirect(viewModel.ReturnUrl);
+            }
+
+            ModelState.AddModelError(string.Empty, "Registration error");
             return View(viewModel);
         }
     }
